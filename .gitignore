@@ -1,0 +1,140 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go build outputs
+bin/
+dist/
+build/
+*.out
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+coverage.txt
+coverage.html
+*.coverprofile
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories (if using vendoring)
+vendor/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.crt
+secrets/
+.secrets
+
+# IDE and Editor files
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# GoLand / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.vim/
+tags
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Database files (if running locally)
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache directories
+.cache/
+.tmp/
+
+# Air (Go live reload tool)
+tmp/
+.air.toml
+!.air.toml.example
+
+# Delve debugger
+__debug_bin
+
+# Local development
+local/
+*.local
+
+# CI/CD artifacts
+.github/workflows/*.local.yml
+```
+
+**Optional: Per-service .gitignore**
+
+If individual services have unique needs, you can also add service-specific `.gitignore` files:
+```
+monorepo/
+├── .gitignore                    # Root (use the one above)
+├── services/
+│   ├── auth/
+│   │   └── .gitignore           # Service-specific if needed
+│   └── orders/
+│       └── .gitignore
